@@ -1,7 +1,7 @@
 # docker-wordpress
 
 ## Prerequisites
-[Docker](https://www.docker.com/) >= 17.0
+[Docker](https://www.docker.com/) >= 17.0  
 [Docker Compose](https://docs.docker.com/compose/) >= 1.14.0
 
 ## Docker Compose
