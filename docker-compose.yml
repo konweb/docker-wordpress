@@ -5,7 +5,7 @@ services:
   # wordpressとPHPのバージョンはタグで指定
   # https://hub.docker.com/_/wordpress/
   wordpress:
-    image: wordpress:4.8-php5.6-apache
+    image: wordpress:latest
     container_name: ${WORDPRESS_CONTAINER_NAME}
     ports:
       - ${APP_PORT}:80
