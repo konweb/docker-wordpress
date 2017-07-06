@@ -6,11 +6,11 @@
 
 ## Docker Compose
 
-
-`$ git clone https://github.com/konweb/docker-wordpress docker-project`
-`$ cd docker-project`
-`$ docker-compose up -d`
-
+```
+$ git clone https://github.com/konweb/docker-wordpress docker-project
+$ cd docker-project
+$ docker-compose up -d
+```
 
 - application : `localhost:{APP_PORT}`
 - phpmyadmin : `localhost:{PMA_PORT}`
@@ -49,8 +49,10 @@ Managed with .env file
 ### Export
 Dump the local database
 
-`$ cd db-data`
-`$ sh ./dump.sh {LOCAL_DOMAIN} {PROD_DOMAIN}`
+```
+$ cd db-data
+$ sh ./dump.sh {LOCAL_DOMAIN} {PROD_DOMAIN}
+```
 
 | name | default value |
 |:-----------|:------------|
@@ -65,8 +67,10 @@ Two files are generated
 ### Import
 Replace the production domain with the local domain and import it into the local database
 
-`$ cd db-data`
-`$ sh ./import.sh {FILE_PATH} {LOCAL_DOMAIN} {PROD_DOMAIN}`
+```
+$ cd db-data
+$ sh ./import.sh {FILE_PATH} {LOCAL_DOMAIN} {PROD_DOMAIN}
+```
 
 | name | default value |
 |:-----------|:------------|
