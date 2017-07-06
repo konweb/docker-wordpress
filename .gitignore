@@ -1,0 +1,17 @@
+.DS_Store
+.bundle
+static
+node_modules
+bower_components
+*.log
+
+# WordPress Exclude Except Theme
+/wordpress/*
+!/wordpress/wp-content/
+/wordpress/wp-content/*
+!/wordpress/wp-content/themes/
+!/wordpress/wp-content/plugins/
+!/wordpress/wp-content/uploads/
+/wordpress/wp-content/themes/twentyfifteen
+/wordpress/wp-content/themes/twentyseventeen
+/wordpress/wp-content/themes/twentysixteen

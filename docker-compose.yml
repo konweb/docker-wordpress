@@ -1,0 +1,39 @@
+version: '3.3'
+
+services:
+  # wordpress
+  # wordpressとPHPのバージョンはタグで指定
+  # https://hub.docker.com/_/wordpress/
+  wordpress:
+    image: wordpress:4.8-php5.6-apache
+    container_name: ${WORDPRESS_CONTAINER_NAME}
+    ports:
+      - ${APP_PORT}:80
+    depends_on:
+      - db
+    env_file: .env
+    volumes:
+      - ./wordpress:/var/www/html
+      - ./php/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  # Database
+  db:
+    image: mysql:latest
+    container_name: ${MYSQL_CONTAINER_NAME}
+    env_file: .env
+      
+  # phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: ${PMA_CONTAINER_NAME}
+    links:
+      - db
+    ports:
+      - ${PMA_PORT}:80
+    env_file: .env
+
+# databaseのように永続的なストレージが欲しい場合に必要な設定
+# https://docs.docker.com/compose/compose-file/#volume-configuration-reference
+volumes:
+  db-data:
+    driver: local
