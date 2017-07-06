@@ -59,7 +59,3 @@ else
 	exit;
 fi
 echo "\n-----------------------------------"
-
-
-
-# mysqldump -h example.jp -u hoge --force --single-transaction --quote-names --default-character-set=binary --compress --add-drop-database --add-drop-table --databases $DB --log-error=$DB.log | gzip > $DB.gz
