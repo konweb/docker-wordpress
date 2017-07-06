@@ -81,4 +81,4 @@ $ sh ./import.sh {FILE_PATH} {LOCAL_DOMAIN} {PROD_DOMAIN}
 
 One files are generated
 
-- `dump.bk` : Backup file before replacement
+- `dump.sql.bk` : Backup file before replacement
